@@ -1,4 +1,4 @@
-var colors = require('colors')
+var chalk = require('chalk')
 var diagonal_resolution_px,
     ppi,
     total_megapixels,
@@ -76,8 +76,8 @@ var diagonal_resolution_px,
       }]
 
 if (process.argv.length != 5) {
-  console.log("wrong arguments has been provided, please provide width, height "
-    + "in pixels and diagonal size in inches on that order")
+  console.log(chalk.blue("wrong arguments has been provided, please provide width, height "
+    + "in pixels and diagonal size in inches on that order"))
 }
 else {
   width_px = Number(process.argv[2])
@@ -118,11 +118,11 @@ else {
     android_category = "Higher than XXXHDPI"
   }
 
-  console.log("       Width: ".gray + width_px + " px".green)
-  console.log("       Height: ".gray + height_px + " px".green)
-  console.log("       Screen Size: ".gray + diagonal_size_inches + " inches".green)
-  console.log("       PPI: ".gray + ppi)
-  console.log("       Aspect Ratio: ".gray + aspect_ratio + " - ".cyan + aspect)
-  console.log("       Android Category: ".gray + android_category)
-  console.log("       Total MegaPixels: ".gray + total_megapixels.toFixed(1))
+  console.log(chalk.blue("       Width: %s px"), chalk.bgGreen(width_px))
+  console.log(chalk.blue("       Height: %s px"), chalk.bgGreen(height_px))
+  console.log(chalk.blue("       Screen Size: %s inches"), chalk.bgGreen(diagonal_size_inches))
+  console.log(chalk.blue("       PPI: %s"), chalk.bgGreen(ppi))
+  console.log(chalk.blue("       Aspect Ratio: %s - %s"), chalk.bgGreen(aspect_ratio, aspect))
+  console.log(chalk.blue("       Android Category: %s"), chalk.bgGreen(android_category))
+  console.log(chalk.blue("       Total MegaPixels: %s"), chalk.bgGreen(total_megapixels.toFixed(1)))
 }
