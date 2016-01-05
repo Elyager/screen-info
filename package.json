@@ -1,0 +1,19 @@
+{
+  "name": "screen-info",
+  "version": "0.0.1",
+  "description": "A simple module to get information related to the current screen or give calculated data of any other screen size.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "screen",
+    "resolution",
+    "ppi"
+  ],
+  "author": "@elyager",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.1.2"
+  }
+}
